@@ -1512,6 +1512,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 1957806651}
+  animator: {fileID: 333093761}
+  playerMovement: {fileID: 1957806650}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

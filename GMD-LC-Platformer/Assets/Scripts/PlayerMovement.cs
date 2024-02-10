@@ -6,7 +6,7 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] private float xSpeed = 10;
-
+    public float Xspeed => xSpeed;
     [SerializeField] private float jumpForce = 800f;
     [SerializeField] private float groundCheckRadius = 0.1f;
     [SerializeField] private LayerMask groundLayer; 
@@ -16,7 +16,8 @@ public class PlayerMovement : MonoBehaviour
     private float _xMoveInput;
 
     private bool _shouldJump;
-    private bool _isGrounded; 
+    private bool _isGrounded;
+    public bool _IsGrounded => _isGrounded;
 
     private void Awake()
     {

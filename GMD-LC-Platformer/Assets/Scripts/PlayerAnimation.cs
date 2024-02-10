@@ -5,6 +5,8 @@ using UnityEngine;
 public class PlayerAnimation : MonoBehaviour
 {
     [SerializeField] private Rigidbody2D rb;
+    [SerializeField] private Animator animator;
+    [SerializeField] private PlayerMovement playerMovement;
 
     private bool _facingRight = true;
 
@@ -24,6 +26,8 @@ public class PlayerAnimation : MonoBehaviour
         {
             Filp();
         }
+        animator.SetFloat("MoveSpeedX", Mathf.Abs(rb.velocity.x)/ playerMovement.Xspeed);
+        animator.SetBool("Grounded", playerMovement._IsGrounded);
     }
 
     private void Filp()
