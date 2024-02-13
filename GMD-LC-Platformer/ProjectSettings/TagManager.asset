@@ -7,6 +7,7 @@ TagManager:
   - MovingPlatform
   - Hazard
   - Checkpoint
+  - Enemy
   layers:
   - Default
   - TransparentFX
