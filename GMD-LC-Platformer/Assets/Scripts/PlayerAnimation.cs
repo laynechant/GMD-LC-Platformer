@@ -12,10 +12,10 @@ public class PlayerAnimation : MonoBehaviour
 
     private void Awake()
     {
-        rb.GetComponent<Rigidbody2D>();
+        rb = GetComponent<Rigidbody2D>();
     }
 
-    // Update is called once per frame
+    
     void Update()
     {
         if (_facingRight && rb.velocity.x < -0.1)
@@ -26,8 +26,8 @@ public class PlayerAnimation : MonoBehaviour
         {
             Filp();
         }
-        animator.SetFloat("MoveSpeedX", Mathf.Abs(rb.velocity.x)/ playerMovement.Xspeed);
-        animator.SetBool("Grounded", playerMovement._IsGrounded);
+        animator.SetFloat("MoveSpeedX", Mathf.Abs(rb.velocity.x)/ playerMovement.XSpeed);
+        animator.SetBool("Grounded", playerMovement.IsGrounded);
     }
 
     private void Filp()
