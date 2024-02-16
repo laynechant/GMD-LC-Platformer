@@ -8,6 +8,7 @@ TagManager:
   - Hazard
   - Checkpoint
   - Enemy
+  - Weakpoint
   layers:
   - Default
   - TransparentFX
