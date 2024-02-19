@@ -1,24 +1,30 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerHealth : MonoBehaviour
 {
-    public int maxHealth;
-    public int health;
-    // Start is called before the first frame update
-    void Start()
+    public static int health = 3;
+
+    public Image[] hearts;
+    public Sprite fullHeart; 
+    public Sprite emptyHeart;
+
+    private void Awake()
     {
-        health = maxHealth; 
+        health = 3; 
     }
 
-    public void TakeDamage(int damage)
+    private void Update()
     {
-        health -= damage;
-        if (health < 0)
+        foreach (Image img in hearts)
         {
-            Destroy(gameObject);
-
+            img.sprite = emptyHeart;
+        }
+        for (int i = 0; i < health; i++) 
+        {
+            hearts[i].sprite = fullHeart;
         }
     }
 }
