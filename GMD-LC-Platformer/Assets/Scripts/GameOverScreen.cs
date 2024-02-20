@@ -21,8 +21,9 @@ public class GameOverScreen : MonoBehaviour
         {
             SceneManager.LoadScene("Level 2");
         }
-
+        else if ("Level 3" == SceneManager.GetActiveScene().name)
+        {
+            SceneManager.LoadScene("Level 3");
+        }
     }
-
-
 }

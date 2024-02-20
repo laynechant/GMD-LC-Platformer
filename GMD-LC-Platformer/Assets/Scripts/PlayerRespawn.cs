@@ -11,18 +11,13 @@ public class PlayerRespawn : MonoBehaviour
     {   
          if (other.gameObject.CompareTag("Hazard"))
         {
-            
             PlayerHealth.health--;
             transform.position = respawn.transform.position;
             if (PlayerHealth.health <= 0 )
             {
-                
-               
                     GameOverScreen.Setup();
-                
             }
         }
-         
         if (other.gameObject.CompareTag("Checkpoint"))
         {
             respawn = other.transform;
