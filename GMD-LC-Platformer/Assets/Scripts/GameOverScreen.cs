@@ -13,8 +13,16 @@ public class GameOverScreen : MonoBehaviour
 
   public void RestartButton()
     {
-        SceneManager.LoadScene("Level 1");
+        if ("Level 1" == SceneManager.GetActiveScene().name)
+        {
+            SceneManager.LoadScene("Level 1");
+        }
+        else if ("Level 2" == SceneManager.GetActiveScene().name)
+        {
+            SceneManager.LoadScene("Level 2");
+        }
+
     }
 
-  
+
 }
