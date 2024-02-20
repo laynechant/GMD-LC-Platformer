@@ -4296,6 +4296,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e3a0b023ac524e4188bd6e3c31b95ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  GameOverScreen: {fileID: 0}
 --- !u!1 &1372875707
 GameObject:
   m_ObjectHideFlags: 0
@@ -5362,7 +5363,7 @@ TrailRenderer:
       m_RotationOrder: 4
     colorGradient:
       serializedVersion: 2
-      key0: {r: 1, g: 1, b: 1, a: 1}
+      key0: {r: 0.93207544, g: 0.31479523, b: 0.31479523, a: 1}
       key1: {r: 1, g: 1, b: 1, a: 1}
       key2: {r: 1, g: 1, b: 1, a: 0}
       key3: {r: 0, g: 0, b: 0, a: 0}
